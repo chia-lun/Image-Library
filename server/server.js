@@ -181,47 +181,4 @@ app.put("/images/:id", (req, res) => {
   });
 });
 
-//////////////////////////////////////////////////////////////////
-// const pathToJson = path.join(__dirname, 'data', 'image.json'); // Path to your JSON file
-// app.put('/update/:id', (req, res) => {
-//   console.log("connect to update api");
-//   const { id } = req.params;
-//   const { updatedImageData } = req.body;
-
-//   // Retrieve the existing image data
-//   fs.readFile(pathToJson, 'utf8', (err, data) => {
-//     if (err) {
-//       console.error('Error reading JSON file:', err);
-//       res.status(500).json({ error: 'Error reading JSON file.' });
-//       return;
-//     }
-
-//     // Parse the JSON data
-//     let imageData = JSON.parse(data);
-
-//     // Find the index of the image with the given ID
-//     const index = imageData.findIndex(image => image.id === id);
-
-//     if (index !== -1) {
-//       // Update the image data at the specified index
-//       imageData[index] = updatedImageData;
-
-//       // Write the updated image data back to the JSON file
-//       fs.writeFile(pathToJson, JSON.stringify(imageData, null, 2), (err) => {
-//         if (err) {
-//           console.error('Error writing JSON file:', err);
-//           res.status(500).json({ error: 'Error writing JSON file.' });
-//           return;
-//         }
-
-//         // Send a success response
-//         res.json({ message: 'Image updated successfully.' });
-//       });
-//     } else {
-//       // If image with the given ID is not found, send a 404 Not Found response
-//       res.status(404).json({ error: 'Image not found.' });
-//     }
-//   });
-// });
-
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
