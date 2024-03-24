@@ -1,0 +1,16 @@
+.image-list {
+  margin-left: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.image-list__item {
+  width: 20%; /* 25% width for each item with some space in between */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.image-list__item img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
